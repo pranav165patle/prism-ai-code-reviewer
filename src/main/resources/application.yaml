@@ -1,0 +1,65 @@
+
+
+
+spring:
+  application:
+    name: ai-pr-reviewer
+
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/ai_pr_reviewer
+    username: root
+    password: "@Pranav165patle"
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+server:
+  port: 8080
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  spring:
+    application:
+      name: ai-pr-reviewer
+
+      github:
+        api-url: https://api.github.com
+
+    datasource:
+      url: jdbc:mysql://localhost:3306/ai_pr_reviewer
+      username: root
+      password: "@Pranav165patle"
+      driver-class-name: com.mysql.cj.jdbc.Driver
+
+    jpa:
+      hibernate:
+        ddl-auto: update
+      show-sql: true
+      properties:
+        hibernate:
+          format_sql: true
+
+  server:
+    port: 8080
+
+  management:
+    endpoints:
+      web:
+        exposure:
+          include: health,info
+
+github:
+  api-url: https://api.github.com
+
+
+
